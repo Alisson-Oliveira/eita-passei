@@ -1,14 +1,16 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
+    <ion-title style="text-align: center;">
+      Home
     </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+  </ion-navbar> 
+</ion-header> 
+<ion-content style="height: 100%">
+  <div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 50%; background-color: #32db64;">
+    <ion-img style="border-radius: 100%;" width="150px" height="150px" src="./../../assets/imgs/calculadora.png"></ion-img>
+  </div> 
+  <div style="display: flex; justify-content: center; align-items: center; height: 50%; width: 100%;">
+    <button ion-button large round color="secondary" (click)="calcular()">Calcular Média</button>
+  </div>  
+</ion-content> 
+  

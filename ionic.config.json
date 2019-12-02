@@ -1,5 +1,7 @@
 {
   "name": "Eita_Passei",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
