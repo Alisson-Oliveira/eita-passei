@@ -19,7 +19,10 @@ export class CalcularPage {
   constructor() { }
 
   public calcular(): void {
-    this.media = (parseFloat(this.nota1) + parseFloat(this.nota2) + parseFloat(this.nota3) + parseFloat(this.nota4)) / 4.0;
+    this.media = (parseFloat(this.nota1) +
+                  parseFloat(this.nota2) +
+                  parseFloat(this.nota3) +
+                  parseFloat(this.nota4)) / 4.0;
     if(this.media >= 6.0){
       this.situacao = true;
     } else {
