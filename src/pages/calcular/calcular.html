@@ -31,7 +31,7 @@
     </ion-item>
   </ion-list>
   <br>
-  <button ion-button round color="secondary"
+  <button ion-button round color="secondary" 
           (click)="calcular()"> Calcular
   </button>
   <br>
@@ -45,8 +45,8 @@
         </h2>
         <h2 *ngIf="situacao === false && media !== 0"
             style="color: red;"> {{media}}
-        </h2>  
-        <h2 *ngIf="situacao === false && media !== 0"
+        </h2>
+        <h2 *ngIf="situacao === false && media === 0"
           style="color: blue;"> {{media}}
       </h2>
       </ion-col>

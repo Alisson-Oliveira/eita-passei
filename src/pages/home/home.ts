@@ -12,6 +12,6 @@ export class HomePage {
 
   public calcular() {
     this.navCtrl.push('CalcularPage');
-  }
+  } 
    
 }
