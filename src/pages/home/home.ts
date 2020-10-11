@@ -13,5 +13,9 @@ export class HomePage {
   public calcular() {
     this.navCtrl.push('CalcularPage');
   } 
-   
+  
+  public alert() {
+    alert("Em breve...");
+  }
+
 }
