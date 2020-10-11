@@ -1,8 +1,8 @@
 {
   "name": "Eita_Passei",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "Alisson Oliveira",
+  "homepage": "",
   "private": true,
   "scripts": {
     "start": "ionic-app-scripts serve",
