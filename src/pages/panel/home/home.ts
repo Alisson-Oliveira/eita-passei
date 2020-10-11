@@ -9,10 +9,6 @@ import { NavController, IonicPage } from 'ionic-angular';
 export class HomePage {
 
   constructor(public navCtrl: NavController) { }
-
-  public calcular() {
-    this.navCtrl.push('CalcularPage');
-  } 
   
   public alert() {
     alert("Em breve...");

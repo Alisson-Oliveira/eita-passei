@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align: center;">
+      Painel 
+    </ion-title>
+  </ion-navbar> 
+</ion-header> 
+<ion-content padding>
+  <div style="font-size: 14pt;">
+    Olá, <b>Alisson Oliveira</b>!
+    Aqui está suas <b>matérias</b>.
+  </div>
+  <hr>
+  <ion-scroll scrollY="true" style="height: 90%;">  
+    <ion-card (click)="alert()" style="border-radius: 10px;">
+      <ion-card-header>
+        <b>Sem matérias</b>
+      </ion-card-header>
+      <ion-card-content>
+        Adicione matérias e acompanhe em tempo real suas notas.
+      </ion-card-content>
+    </ion-card>
+  </ion-scroll>
+  <button ion-button (click)="alert()" large full>
+    Adicionar matéria
+  </button>
+</ion-content>  
