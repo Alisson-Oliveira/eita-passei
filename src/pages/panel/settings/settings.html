@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align: center;">Perfil</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div style="height: 50%; width: 100%; background: teal"></div>
+  <ion-card>
+    <ion-list no-lines>
+      <ion-item (click)="alert()">
+        <ion-icon name="create" item-start></ion-icon>
+        Editar
+      </ion-item> 
+      <ion-item (click)="alert()">
+        <ion-icon name="settings" item-start></ion-icon>
+        Configurações 
+      </ion-item>
+      <ion-item (click)="alert()">
+        <ion-icon name="log-out" item-start></ion-icon>
+        Sair  
+      </ion-item> 
+    </ion-list>  
+  </ion-card>
+  <ion-card style="top: 12%; border-radius: 50%; height: 100px; width: 100px; padding: 0px;">
+    <ion-img style="width: 100px; height: 100px; border-radius: 50%;" src="../../../assets/avatar/avatar_1.png"></ion-img>
+  </ion-card>
+</ion-content>
