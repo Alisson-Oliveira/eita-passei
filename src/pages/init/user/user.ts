@@ -12,7 +12,7 @@ export class UserPage {
   }
 
   public openHome() { 
-    return this.navCtrl.setRoot('HomePage');
+    return this.navCtrl.setRoot('TabsPage');
   }
 
   public backEnsino() {
