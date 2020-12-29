@@ -8,7 +8,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class UserPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public active: boolean = true;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) { }
+
+  public isActive(state: boolean): boolean {
+    this.active = state;
+
+    return state; 
   }
 
   public openHome() { 

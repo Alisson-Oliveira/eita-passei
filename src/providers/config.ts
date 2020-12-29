@@ -1,13 +1,22 @@
 import { Injectable } from '@angular/core';
 
-let config_Access_key = "Config_User";
+const config_Access_key = "@eita-passei:config";
+
+interface ConfigParams {
+  name: string,
+  ensino: string,
+  avatar: string,
+  materias: any[],
+  install: boolean,
+};
 
 @Injectable()
 export class ConfigProvider {
 
-  private config = {
+  private config: ConfigParams = {
     name: "",
     avatar: "",
+    ensino: "",
     materias: [],
     install: false,
   }

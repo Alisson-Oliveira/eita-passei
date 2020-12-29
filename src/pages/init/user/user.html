@@ -1,26 +1,94 @@
-<ion-content text-center padding>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-title>
-          Escolha um avatar.
-        </ion-title>        
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
+<ion-content text-center>
+  <div style="  display: flex;
+                height: 100%;
+                flex-direction: column;
+                justify-content: space-between; "
+  >
+    <div style="  width: 100%;
+                  flex-direction: column;
+                  align-items: center;
+                  padding: 24px;
+                  border-bottom-left-radius: 32px;
+                  border-bottom-right-radius: 32px;
+                  background-color: teal;
+                  justify-content: space-between; "
+    >
+      <button ion-button color="dark" clear color="light" icon-only style="display: flex; align-self: start; width: 36px;" (click)="backEnsino()">
+        <ion-icon 
+          name="md-arrow-round-back"
+          style="font-size: 30px;"
+        ></ion-icon>
+      </button>
+      <ion-title>
+        Escolha um avatar
+      </ion-title> 
+      <div style="  display: flex;
+                    height: 100px;
+                    width: 100%;
+                    max-width: 350px;
+                    margin-top: 20px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: row; "
+      >
+        <div style="  height: 100px; 
+                      width: 80px; 
+                      justify-content: space-between; 
+                      align-items: center; 
+                      flex-direction: column; "
+        >
+          <ion-img 
+            (onClick)="isActive(!active)"
+            src="../../../assets/avatar/man.png"
+            style="width: 80px; height: 80px; border-radius: 100%;"
+          ></ion-img>
+          <ion-icon md="md-checkmark-circle-outline" color="light"></ion-icon>
+        </div>
+        <div style="  height: 100px; 
+                      width: 80px; 
+                      justify-content: space-between; 
+                      align-items: center; 
+                      flex-direction: column; "
+        > 
+          <ion-img 
+            src="../../../assets/avatar/woman.png"
+            style="width: 80px; height: 80px; border-radius: 100%;"
+          ></ion-img>
+          <ion-icon md="md-checkmark-circle-outline" color="light"></ion-icon>
+        </div>
+        <div style="  height: 100px; 
+                      width: 80px; 
+                      justify-content: space-between; 
+                      align-items: center; 
+                      flex-direction: column; "
+        >
+          <ion-img 
+            src="../../../assets/avatar/avatar_1.png"
+            style="width: 80px; height: 80px; border-radius: 100%;"
+          ></ion-img>
+          <ion-icon md="md-checkmark-circle-outline" color="light"></ion-icon>
+        </div>
+      </div>
+      <div
+        style="margin-top: 32px;"
+      >
         <ion-title>
           Como devemos te chamar?
-        </ion-title>        
-      </ion-col>
-    </ion-row>
-    <div style="width: 100%;">
-      <button ion-button (click)="openHome()" large style="width: 100%;">
+        </ion-title> 
+        <ion-item style="margin-top: 12px; border-radius: 12px;">
+          <ion-label fixed>Username</ion-label>
+          <ion-input type="text" value=""></ion-input>
+        </ion-item>       
+      </div>
+    </div>
+    <div style="  width: 100%; 
+                  padding: 24px; "
+    >
+      <button ion-button (click)="openHome()" large style="width: 270px; background-color: teal; text-transform: none; border-radius: 12px;">
         Entrar
       </button>
-      <button ion-button outline (click)="backEnsino()" large style="width: 100%;">
-        Voltar
-      </button>
     </div>
-  </ion-grid>
+  </div>
 </ion-content> 

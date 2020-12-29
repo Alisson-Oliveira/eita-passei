@@ -4,4 +4,15 @@ page-user {
         align-items: center;
         justify-content: space-between;
     }
+
+    .slide-zoom {
+        display: flex;
+        width: 80px;
+        height: 80px;
+        margin: 0px;
+    }
+
+    .toolbar-title-md {
+        color: #FFFFFF;
+    }
 }
