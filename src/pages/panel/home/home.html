@@ -1,27 +1,38 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title style="text-align: center;">
-      Painel 
-    </ion-title>
-  </ion-navbar> 
-</ion-header> 
-<ion-content padding>
-  <div style="font-size: 14pt;">
-    Olá, <b>Alisson Oliveira</b>!
-    Aqui está suas <b>matérias</b>.
+<ion-content>
+  <div style="width: 100%; background-color: teal; padding: 20px; color: #FFFFFF">
+    <div style="font-size: 18pt; margin-bottom: 12px" >
+      Olá, <b>Alisson Oliveira</b>!
+    </div>
+    <div style="font-size: 12pt;">
+      Aqui está suas <b>matérias</b>.
+    </div>  
   </div>
-  <hr>
+
   <ion-scroll scrollY="true" style="height: 90%;">  
-    <ion-card (click)="alert()" style="border-radius: 10px;">
+    <!-- <ion-card (click)="alert()" style="border-radius: 10px;">
       <ion-card-header>
         <b>Sem matérias</b>
       </ion-card-header>
       <ion-card-content>
         Adicione matérias e acompanhe em tempo real suas notas.
       </ion-card-content>
+    </ion-card> -->
+
+    <ion-card (click)="alert()" style="border-radius: 10px;">
+      <ion-card-header style="text-align: center;">
+        <b style="font-size: 16pt;">Matemática</b>
+        <p style="font-size: 11pt;">Alisson</p>
+      </ion-card-header>
+      <ion-card-content>
+        <button ion-button large style="display: flex; align-self: center; width: 250px; height: 56px; background-color: teal; text-transform: none; border-radius: 12px">
+          Mostrar
+        </button>
+      </ion-card-content>
     </ion-card>
   </ion-scroll>
-  <button ion-button (click)="alert()" large full>
+
+  <button ion-button (click)="handleToPlus()" large style="display: flex; align-self: center; width: 270px; height: 76px; background-color: teal; text-transform: none; border-radius: 12px; margin: 10px 20px;">
     Adicionar matéria
   </button>
 </ion-content>  
+ 

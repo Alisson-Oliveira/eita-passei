@@ -1,27 +1,19 @@
 <ion-content text-center class="card-background-page">
-  <ion-grid class="background-model">
-    <ion-row>
-      <ion-col>
-        <ion-title>
-          Ensino <br> Médio ou Superior?
-        </ion-title>
-      </ion-col>
-    </ion-row>
-    <ion-row> 
-      <ion-col>
-        <ion-card (click)="openUser()" style="border-radius: 24px;">
-          <img src="../../assets/ensino/image_1.jpg" />
-          <div class="card-title">Ensino Médio</div>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-    <ion-row> 
-      <ion-col>
-        <ion-card (click)="openUser()" style="border-radius: 24px;">
-          <img src="../../assets/ensino/image_2.jpg"/>
-          <div class="card-title">Ensino Superior</div>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <div class="content">
+    <div class="header">
+      <ion-title>
+        Ensino <br> Médio ou Superior?
+      </ion-title>
+    </div>  
+    <div class="content-card">
+      <ion-card (click)="openUser()" class="high-school">
+        <img src="../../assets/ensino/image_1.jpg" />
+        <div class="card-title">Ensino Médio</div>
+      </ion-card>
+      <ion-card (click)="openUser()" class="college">
+        <img src="../../assets/ensino/image_2.jpg"/>
+        <div class="card-title">Ensino Superior</div>
+      </ion-card>
+    </div>
+  </div>
 </ion-content> 

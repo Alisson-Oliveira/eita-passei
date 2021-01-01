@@ -1,3 +1,9 @@
 page-tabs {
+  .tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+    color: teal;
+  }
 
+  .tabs-md .tab-button[aria-selected=true] {
+    color: teal;
+  }
 }

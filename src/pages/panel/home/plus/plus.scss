@@ -1,0 +1,15 @@
+page-plus {
+    .scroll-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .toolbar-title-md {
+            padding: 0;
+        }
+
+        .item-md {
+            padding-left: 0px;
+        }
+    }
+}

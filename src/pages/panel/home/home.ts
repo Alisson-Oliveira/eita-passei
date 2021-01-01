@@ -14,4 +14,8 @@ export class HomePage {
     alert("Em breve...");
   }
 
+  public handleToPlus() {
+    this.navCtrl.push('PlusPage');
+  }
+
 }
