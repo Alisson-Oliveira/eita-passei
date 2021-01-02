@@ -18,4 +18,8 @@ export class HomePage {
     this.navCtrl.push('PlusPage');
   }
 
+  public handleToDetails() {
+    this.navCtrl.push('DetailsPage');
+  }
+
 }
