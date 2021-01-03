@@ -1,0 +1,88 @@
+page-user {
+  .user-container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .user-content {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+      border-bottom-left-radius: 32px;
+      border-bottom-right-radius: 32px;
+      background-color: teal;
+      justify-content: space-between;
+
+      .arrow-button {
+        display: flex;
+        align-self: start; 
+        width: 36px;
+
+        .arrow-button-size {
+          font-size: 30px;
+        }
+      }
+
+      .images-container {
+        display: flex;
+        height: 100px;
+        width: 100%;
+        max-width: 350px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+
+        .images-container-image {
+          height: 100px; 
+          width: 80px; 
+          justify-content: space-between; 
+          align-items: center; 
+          flex-direction: column;
+        }
+
+        .images-container-size {
+          width: 80px; 
+          height: 80px; 
+          border-radius: 100%;
+        }
+      }
+
+      .input-content {
+        margin-top: 32px;
+
+        .input-content-item {
+          margin-top: 12px; 
+          border-radius: 12px;
+        }
+      }
+    }
+
+    .singin-button {
+      width: 100%; 
+      padding-bottom: 24px;
+
+      .singin-button-content {
+        width: 270px; 
+        background-color: teal; 
+        text-transform: none; 
+        border-radius: 12px;
+      }
+    }
+
+    .slide-zoom {
+      display: flex;
+      width: 80px;
+      height: 80px;
+      margin: 0px;
+    }
+  
+    .toolbar-title-md {
+      color: #FFFFFF;
+    }
+  }
+}

@@ -1,19 +1,24 @@
 <ion-content>
   <div style="height: 50%; width: 100%; background: teal"></div>
   <ion-card>
+    <div style="font-size: 18pt; text-align: center;"> Alisson Oliveira </div> 
+    <hr> 
     <ion-list no-lines>
       <ion-item (click)="alert()">
         <ion-icon name="create" item-start></ion-icon>
         Editar
       </ion-item> 
-      <ion-item (click)="alert()">
-        <ion-icon name="settings" item-start></ion-icon>
-        Configurações 
+      <ion-item (click)="alert()"> 
+        <ion-icon name="md-document" item-start></ion-icon>
+        Legal
       </ion-item>
-      <ion-item (click)="alert()">
-        <ion-icon name="log-out" item-start></ion-icon>
-        Sair  
-      </ion-item> 
+      <ion-item>
+        <ion-icon name="md-cube" item-start></ion-icon>
+        <div style="display: flex; justify-content: space-between;">
+          Versão
+          <b>1.0.0</b>
+        </div>
+      </ion-item>
     </ion-list>  
   </ion-card>
   <ion-card style="top: 12%; border-radius: 50%; height: 100px; width: 100px; padding: 0px;">
