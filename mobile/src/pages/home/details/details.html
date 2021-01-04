@@ -3,7 +3,6 @@
     <ion-title>details</ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
   <ion-card style="border-radius: 12px;">
     <ion-card-header style="display: flex; justify-content: space-between;">
@@ -13,7 +12,7 @@
       </div>
       <ion-icon 
         name="md-create"
-        style="font-size: 16pt;"
+        style="font-size: 16pt; color: teal"
         (click)="alert()"
       ></ion-icon>
     </ion-card-header>
@@ -24,27 +23,27 @@
         <div *ngFor="let item of subject.grades">
           <div style="display: flex; justify-content: space-between; align-items: flex-end;">
             <p style="font-size: 12pt;">Nota {{item.id}}:</p>
-            <b style="font-size: 14pt;">{{item.grade}}</b>
+            <b style="font-size: 14pt;">{{item.grade}}</b> 
           </div>
           <div style="display: flex; justify-content: space-between; align-items: flex-start;">
             <p style="font-size: 12pt;">Peso</p>
             <p style="font-size: 10pt;">(x{{item.weight}})</p>
           </div>
-          <b style="display: flex; justify-content: flex-end; font-size: 14pt;">20.0</b>
+          <b style="display: flex; justify-content: flex-end; font-size: 14pt;">{{getGrades(item.grade, item.weight).toFixed(1)}}</b>
         </div>
       </div>
       <div>
-        <b style="font-size: 14pt;">Nota Final</b>
+        <b style="font-size: 14pt;">Nota Final</b> 
         <hr>
         <div style="display: flex; justify-content: space-between; align-items: flex-end;">
           <p style="font-size: 12pt;">Nota Total:</p>
-          <b style="font-size: 14pt;">80.0</b>
+          <b style="font-size: 14pt;">{{getFinalGrade()}}</b>
         </div>
         <div style="display: flex; justify-content: space-between; align-items: flex-end;">
           <p style="font-size: 12pt;">Peso Total:</p>
-          <p style="font-size: 12pt;">(x8)</p>
+          <p style="font-size: 12pt;">(x{{getFinalWeight()}})</p>
         </div>
-        <b style="display: flex; justify-content: flex-end; font-size: 18pt;">10.0</b>
+        <b style="display: flex; justify-content: flex-end; font-size: 18pt;">{{getFinal().toFixed(2)}}</b>
       </div>
       <div>
         <b style="font-size: 14pt;">Média Geral</b>
@@ -57,9 +56,18 @@
         <b style="font-size: 14pt;">Situação</b>
         <hr>
         <div style="display: flex; justify-content: center; align-items: flex-end;">
-          <b style="font-size: 14pt;">Aprovado</b>
+          <b style="font-size: 14pt; ">{{getState()}}</b>
         </div>
       </div>
     </ion-card-content>
+    <div style="margin-bottom: 12px; width: 100%; display: flex; justify-content: center;">
+      <button (click)="handleRemoveSubject()" ion-button outline icon-start color="danger" style="width: 120px; height: 36px; text-transform: none; border-radius: 12px;">
+        <ion-icon 
+          name="md-trash"
+          style="font-size: 12pt;"
+        ></ion-icon>
+        Remover
+      </button> 
+    </div>
   </ion-card>
 </ion-content>
