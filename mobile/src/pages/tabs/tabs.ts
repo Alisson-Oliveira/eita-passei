@@ -3,13 +3,13 @@ import { IonicPage } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-tabs',
-  templateUrl: 'tabs.html',
+  selector: 'page-tabs', 
+  templateUrl: 'tabs.html', 
 })
 export class TabsPage {
-
+  
   public tab1Root: string = 'HomePage';
-  public tab2Root: string = 'SettingsPage';
+  public tab2Root: string = 'SettingsPage';  
 
   constructor() { }
 

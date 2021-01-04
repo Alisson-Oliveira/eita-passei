@@ -15,21 +15,21 @@ export class ConfigProvider {
   private config: ConfigParams = {
     username: "",
     avatar: "",
-    materias: [],
+    materias: [], 
     install: false,
   }
 
-  constructor () { }
+  constructor () { } 
 
   public getConfig(): ConfigParams {
-    return JSON.parse(localStorage.getItem(config_Access_key));
+    return JSON.parse(localStorage.getItem(config_Access_key)); 
   }
 
   public setConfig(username: string, avatar: string, materias: any, install: boolean): void {
 
     if (username) {
       this.config.username = username;
-    }
+    } 
 
     if (avatar) {
       this.config.avatar = avatar;

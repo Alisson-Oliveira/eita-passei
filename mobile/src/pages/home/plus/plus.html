@@ -9,186 +9,189 @@
       Identificação
     </ion-title>
     <ion-item>
-      <ion-label fixed>Nome</ion-label>
-      <ion-input type="text" value=""></ion-input>
+      <ion-label fixed>Matéria</ion-label>
+      <ion-input type="text" [(ngModel)]="matter"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label fixed>Professor</ion-label>
-      <ion-input type="text" value=""></ion-input>
+      <ion-input type="text" [(ngModel)]="teacher"></ion-input>
     </ion-item>
   </div>
-  <div style="margin-top: 20px;">
+  <div class="average">
     <ion-title> Média geral </ion-title>
-    <div style="display: flex;
-                flex-direction: column;
-                width: 100%;"
-    >      
+    <div class="average-input">      
       <ion-item>
         <ion-label fixed>Média</ion-label>
-        <ion-input type="number" value=""></ion-input>
+        <ion-input type="number" [(ngModel)]="overallAverage"></ion-input>
       </ion-item>
-      </div>
     </div>
-  <div style="margin-top: 20px;">
+  </div>
+  <div class="content">
     <ion-title> Notas </ion-title>
-    <div style="display: flex;
-                flex-direction: column;
-                width: 100%;"
-    >      
+    <div class="grade">      
       <ion-item>
         <ion-label fixed>Nota 1</ion-label>
-        <ion-input type="number" value=""></ion-input>
+        <ion-input type="number" [(ngModel)]="grade1"></ion-input>
       </ion-item>
-      <ion-item>
+      <ion-item *ngIf="isWeight1 === true">
         <ion-label fixed>Peso</ion-label>
-        <ion-input type="number" value=""></ion-input>
+        <ion-input type="number" [(ngModel)]="weight1"></ion-input>
       </ion-item>
-      <div style="display: flex; align-self: flex-end;">
-        <!-- <button ion-button small 
-                style=" margin-top: 12px; 
-                        width: 108px;
-                        background-color: teal; 
-                        text-transform: none; 
-                        border-radius: 8px;"
+      <div class="weight">
+        <button 
+          *ngIf="isWeight1 === false"
+          ion-button 
+          small 
+          class="weight-button-plus"
+          (click)="systemWeight(1, true)"
         >
           Adicionar peso
-        </button> -->
-        <button ion-button small color="danger"
-                style=" margin-top: 12px; 
-                        width: 108px; 
-                        text-transform: none; 
-                        border-radius: 8px;"
+        </button>
+        <button 
+          *ngIf="isWeight1 !== false"
+          ion-button 
+          small 
+          color="danger"
+          class="weight-button-remove"
+          (click)="systemWeight(1, false)"
         >
           Remover peso
         </button>
       </div>
     </div>
-    <div style="display: flex;
-                align-self: flex-end;
-                flex-direction: column;
-                width: 100%;"
-    >
+    <div class="grade">
       <ion-item>
         <ion-label fixed>Nota 2</ion-label>
-        <ion-input type="number" value=""></ion-input>
+        <ion-input type="number" [(ngModel)]="grade2"></ion-input>
       </ion-item>
-      <ion-item>
+      <ion-item *ngIf="isWeight2 === true">
         <ion-label fixed>Peso</ion-label>
-        <ion-input type="number" value=""></ion-input>
+        <ion-input type="number" [(ngModel)]="weight2"></ion-input>
       </ion-item>
-      <div style="display: flex; align-self: flex-end;">
-        <!-- <button ion-button small 
-                style=" margin-top: 12px; 
-                        width: 108px;
-                        align-self: flex-end;
-                        background-color: teal; 
-                        text-transform: none; 
-                        border-radius: 8px;"
+      <div class="weight">
+        <button 
+          *ngIf="isWeight2 === false"
+          ion-button 
+          small 
+          class="weight-button-plus"
+          (click)="systemWeight(2, true)"
         >
           Adicionar peso
-        </button> -->
-        <button ion-button small color="danger"
-                style=" margin-top: 12px; 
-                        width: 108px; 
-                        text-transform: none; 
-                        border-radius: 8px;"
+        </button>
+        <button 
+          *ngIf="isWeight2 !== false"
+          ion-button 
+          small 
+          color="danger"
+          class="weight-button-remove"
+          (click)="systemWeight(2, false)"
         >
           Remover peso
         </button>
       </div>
     </div>
-    <div style="display: flex;
-                align-self: flex-end;
-                flex-direction: column;
-                width: 100%;"
-    >
+    <div *ngIf="isGrade3 === true" class="grade">
       <ion-item>
         <ion-label fixed>Nota 3</ion-label>
-        <ion-input type="number" value=""></ion-input>
+        <ion-input type="number" [(ngModel)]="grade3"></ion-input>
       </ion-item>
-      <ion-item>
+      <ion-item *ngIf="isWeight3 === true">
         <ion-label fixed>Peso</ion-label>
-        <ion-input type="number" value=""></ion-input>
+        <ion-input type="number" [(ngModel)]="weight3"></ion-input>
       </ion-item>
-      <div style="display: flex; align-self: flex-end;">
-        <button ion-button small color="danger"
-                style=" margin-top: 12px; 
-                        width: 108px;
-                        align-self: flex-end;  
-                        text-transform: none; 
-                        border-radius: 8px;"
+      <div class="weight">
+        <button 
+          (click)="systemGrade(3, false)"  
+          ion-button small color="danger"
+          style=" margin-top: 12px; 
+                  width: 108px;
+                  align-self: flex-end;  
+                  text-transform: none; 
+                  border-radius: 8px;"
         >
           Remover nota
         </button>
         <div>
-          <!-- <button ion-button small 
-                  style=" margin-top: 12px; 
-                          width: 108px;
-                          align-self: flex-end;
-                          background-color: teal; 
-                          text-transform: none; 
-                          border-radius: 8px;"
+          <button 
+            *ngIf="isWeight3 === false"
+            ion-button 
+            small 
+            class="weight-button-plus"
+            (click)="systemWeight(3, true)"
           >
             Adicionar peso
-          </button> -->
-          <button ion-button small color="danger"
-                  style=" margin-top: 12px; 
-                          width: 108px; 
-                          text-transform: none; 
-                          border-radius: 8px;"
+          </button>
+          <button 
+            *ngIf="isWeight3 !== false"
+            ion-button 
+            small 
+            color="danger"
+            class="weight-button-remove"
+            (click)="systemWeight(3, false)"
           >
             Remover peso
           </button>
         </div>
       </div>
     </div>
-    <div style="display: flex;
-                flex-direction: column;
-                width: 100%;"
-    >
+    <div *ngIf="isGrade4 === true" class="grade">
       <ion-item>
         <ion-label fixed>Nota 4</ion-label>
-        <ion-input type="number" value=""></ion-input>
+        <ion-input type="number" [(ngModel)]="grade4"></ion-input>
       </ion-item>
-      <ion-item>
+      <ion-item *ngIf="isWeight4 === true">
         <ion-label fixed>Peso</ion-label>
-        <ion-input type="number" value=""></ion-input>
+        <ion-input type="number" [(ngModel)]="weight4"></ion-input>
       </ion-item>
-      <div style="display: flex; align-self: flex-end;">
-        <button ion-button small color="danger"
-                style=" margin-top: 12px; 
-                        width: 108px;
-                        align-self: flex-end;  
-                        text-transform: none; 
-                        border-radius: 8px;"
+      <div class="weight">
+        <button 
+          (click)="systemGrade(4, false)"
+          ion-button 
+          small 
+          color="danger"
+          style=" margin-top: 12px; 
+                  width: 108px;
+                  align-self: flex-end;  
+                  text-transform: none; 
+                  border-radius: 8px;"
         >
           Remover nota
         </button>
         <div>
-          <!-- <button ion-button small 
-                  style=" margin-top: 12px; 
-                          width: 108px;
-                          align-self: flex-end;
-                          background-color: teal; 
-                          text-transform: none; 
-                          border-radius: 8px;"
+          <button 
+            *ngIf="isWeight4 === false"
+            ion-button 
+            small 
+            class="weight-button-plus"
+            (click)="systemWeight(4, true)"
           >
             Adicionar peso
-          </button> -->
-          <button ion-button small color="danger"
-                  style=" margin-top: 12px; 
-                          width: 108px; 
-                          text-transform: none; 
-                          border-radius: 8px;"
+          </button>
+          <button 
+            *ngIf="isWeight4 !== false"
+            ion-button 
+            small 
+            color="danger"
+            class="weight-button-remove"
+            (click)="systemWeight(4, false)"
           >
             Remover peso
           </button>
         </div>
       </div>
+    </div>
+    <div *ngIf="isGrade === true" style="margin-top: 12px; width: 100%; display: flex; justify-content: center;">
+      <button (click)="isGrade3 === true ? systemGrade(4, true) : systemGrade(3, true)" ion-button small style="width: 120px; height: 36px; background-color: teal; text-transform: none; border-radius: 12px;">
+        Adicionar nota
+      </button>
     </div>
   </div>
   <div style="margin-top: 12px; width: 100%; display: flex; justify-content: center;">
-    <button ion-button large color="secundary" style="width: 250px; height: 56px; background-color: teal; text-transform: none; border-radius: 12px;">
+    <button (click)="systemSaveSubject()" ion-button icon-start style="width: 120px; height: 36px; background-color: teal; text-transform: none; border-radius: 12px;">
+      <ion-icon 
+        name="md-send"
+        style="font-size: 12pt; font-weight: bold;"
+      ></ion-icon>
       Salvar
     </button> 
   </div>
