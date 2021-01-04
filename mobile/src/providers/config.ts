@@ -3,34 +3,32 @@ import { Injectable } from '@angular/core';
 const config_Access_key = "@eita-passei:config";
 
 interface ConfigParams {
-  name: string,
-  ensino: string,
-  avatar: string,
-  materias: any[],
-  install: boolean,
+  username?: string,
+  avatar?: string,
+  materias?: any[],
+  install?: boolean,
 };
 
 @Injectable()
 export class ConfigProvider {
 
   private config: ConfigParams = {
-    name: "",
+    username: "",
     avatar: "",
-    ensino: "",
     materias: [],
     install: false,
   }
 
   constructor () { }
 
-  public getConfig(): any {
-    return localStorage.getItem(config_Access_key);
+  public getConfig(): ConfigParams {
+    return JSON.parse(localStorage.getItem(config_Access_key));
   }
 
-  public setConfig(name: string, avatar: string, materias: any, install: boolean): void {
+  public setConfig(username: string, avatar: string, materias: any, install: boolean): void {
 
-    if (name) {
-      this.config.name = name;
+    if (username) {
+      this.config.username = username;
     }
 
     if (avatar) {
@@ -41,7 +39,7 @@ export class ConfigProvider {
       this.config.materias = materias;
     }
 
-    if (install == true || install == false) {
+    if (install === true || install === false) {
       this.config.install = install;
     }
     

@@ -1,44 +1,33 @@
 <ion-content text-center>
   <div class="user-container">
     <div class="user-content">
-      <!-- <button 
-        ion-button 
-        clear 
-        icon-only 
-        color="light" 
-        class="arrow-button" 
-        (click)="backEnsino()"
-      >
-        <ion-icon 
-          name="md-arrow-round-back"
-          class="arrow-button-size"
-        ></ion-icon>
-      </button> -->
       <ion-title>
         Escolha um avatar
       </ion-title> 
       <div class="images-container">
         <div class="images-container-image">
           <ion-img 
-            (onClick)="isActive(!active)"
+            (click)="isSelected(1)"
             src="../../../assets/avatar/man.png"
             class="images-container-size"
-          ></ion-img>
-          <ion-icon md="md-checkmark-circle-outline" color="light"></ion-icon>
+          ></ion-img>          
+          <ion-icon *ngIf="selected === 1" md="md-checkmark-circle-outline" color="light"></ion-icon>
         </div>
         <div class="images-container-image"> 
           <ion-img 
+            (click)="isSelected(2)"
             src="../../../assets/avatar/woman.png"
             class="images-container-size"
-          ></ion-img>
-          <ion-icon md="md-checkmark-circle-outline" color="light"></ion-icon>
+          ></ion-img>          
+          <ion-icon *ngIf="selected === 2" md="md-checkmark-circle-outline" color="light"></ion-icon>
         </div>
         <div class="images-container-image">
           <ion-img 
+            (click)="isSelected(3)"
             src="../../../assets/avatar/avatar_1.png"
             class="images-container-size"
-          ></ion-img>
-          <ion-icon md="md-checkmark-circle-outline" color="light"></ion-icon>
+          ></ion-img>          
+          <ion-icon *ngIf="selected === 3" md="md-checkmark-circle-outline" color="light"></ion-icon>
         </div>
       </div>
       <div class="input-content">
@@ -47,7 +36,7 @@
         </ion-title> 
         <ion-item class="input-content-item">
           <ion-label fixed>Username</ion-label>
-          <ion-input type="text" value=""></ion-input>
+          <ion-input type="text" [(ngModel)]="username"></ion-input>
         </ion-item>       
       </div>
     </div>
@@ -57,7 +46,7 @@
         large
         icon-start
         class="singin-button-content"
-        (click)="openHome()"
+        (click)="systemOpenHomePage()"
       >
         <ion-icon md="md-log-in" color="light"></ion-icon>
         Entrar

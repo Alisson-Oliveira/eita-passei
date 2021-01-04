@@ -1,10 +1,11 @@
 <ion-content>
   <div class="header">
-    <div class="username"> Olá, <b>Alisson Oliveira</b>! </div>
+    <div class="username"> Olá, <b>{{username}}</b>! </div>
     <div class="subtitle"> Aqui está suas <b>matérias</b>. </div>  
   </div>
   <ion-scroll scrollY="true" class="content">  
-    <ion-card class="content-empty">
+
+    <ion-card *ngIf="subjects.length === 0" class="content-empty">
       <ion-card-header>
         <b>Sem matérias</b>
       </ion-card-header>
@@ -13,56 +14,24 @@
       </ion-card-content>
     </ion-card>
 
-    <ion-card class="content-container">
-      <ion-card-header class="content-header">
-        <b class="content-title">Matemática</b>
-        <p class="content-subtitle">Alisson</p>
-      </ion-card-header>
-      <ion-card-content class="content-button">
-        <button 
-          ion-button 
-          large 
-          class="content-button-details" 
-          (click)="handleToDetails()"
-        >
-          Mostrar
-        </button>
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card class="content-container">
-      <ion-card-header class="content-header">
-        <b class="content-title">Matemática</b>
-        <p class="content-subtitle">Alisson</p>
-      </ion-card-header>
-      <ion-card-content class="content-button">
-        <button 
-          ion-button 
-          large 
-          class="content-button-details" 
-          (click)="handleToDetails()"
-        >
-          Mostrar
-        </button>
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card class="content-container">
-      <ion-card-header class="content-header">
-        <b class="content-title">Matemática</b>
-        <p class="content-subtitle">Alisson</p>
-      </ion-card-header>
-      <ion-card-content class="content-button">
-        <button 
-          ion-button 
-          large 
-          class="content-button-details" 
-          (click)="handleToDetails()"
-        >
-          Mostrar
-        </button>
-      </ion-card-content>
-    </ion-card>
+    <div *ngIf="subjects.length !== 0" >
+      <ion-card *ngFor="let item of subjects" class="content-container">
+          <ion-card-header class="content-header">
+            <b class="content-title">{{item.matter}}</b>
+            <p class="content-subtitle">{{item.teacher}}</p>
+          </ion-card-header>
+          <ion-card-content class="content-button">
+            <button 
+              ion-button 
+              large 
+              class="content-button-details"  
+              (click)="handleToDetails(item)"
+            >
+              Mostrar
+            </button>
+          </ion-card-content>
+      </ion-card>
+    </div>
   </ion-scroll>
 
   <button ion-button large class="button-plus" (click)="handleToPlus()">
