@@ -8,8 +8,8 @@
   <ion-card style="border-radius: 12px;">
     <ion-card-header style="display: flex; justify-content: space-between;">
       <div style="display: flex; flex-direction: column;">
-        <b style="font-size: 16pt;">Matemática</b>
-        <i style="font-size: 11pt;">Alisson</i>
+        <b style="font-size: 16pt;">{{subject.matter}}</b>
+        <i style="font-size: 11pt;">{{subject.teacher}}</i>
       </div>
       <ion-icon 
         name="md-create"
@@ -21,50 +21,14 @@
       <div>
         <b style="font-size: 14pt;">Notas</b>
         <hr>
-        <div>
+        <div *ngFor="let item of subject.grades">
           <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-            <p style="font-size: 12pt;">Nota 1:</p>
-            <b style="font-size: 14pt;">10.0</b>
+            <p style="font-size: 12pt;">Nota {{item.id}}:</p>
+            <b style="font-size: 14pt;">{{item.grade}}</b>
           </div>
-          <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start;">
             <p style="font-size: 12pt;">Peso</p>
-            <p style="font-size: 12pt;">(x2)</p>
-          </div>
-          <b style="display: flex; justify-content: flex-end; font-size: 14pt;">20.0</b>
-        </div>
-        <hr>
-        <div>
-          <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-            <p style="font-size: 12pt;">Nota 2:</p>
-            <b style="font-size: 14pt;">10.0</b>
-          </div>
-          <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-            <p style="font-size: 12pt;">Peso</p>
-            <p style="font-size: 12pt;">(x2)</p>
-          </div>
-          <b style="display: flex; justify-content: flex-end; font-size: 14pt;">20.0</b>
-        </div>
-        <hr>
-        <div>
-          <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-            <p style="font-size: 12pt;">Nota 3:</p>
-            <b style="font-size: 14pt;">10.0</b>
-          </div>
-          <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-            <p style="font-size: 12pt;">Peso</p>
-            <p style="font-size: 12pt;">(x2)</p>
-          </div>
-          <b style="display: flex; justify-content: flex-end; font-size: 14pt;">20.0</b>
-        </div>
-        <hr>
-        <div>
-          <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-            <p style="font-size: 12pt;">Nota 4:</p>
-            <b style="font-size: 14pt;">10.0</b>
-          </div>
-          <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-            <p style="font-size: 12pt;">Peso</p>
-            <p style="font-size: 12pt;">(x2)</p>
+            <p style="font-size: 10pt;">(x{{item.weight}})</p>
           </div>
           <b style="display: flex; justify-content: flex-end; font-size: 14pt;">20.0</b>
         </div>
@@ -86,7 +50,7 @@
         <b style="font-size: 14pt;">Média Geral</b>
         <hr>
         <div style="display: flex; justify-content: center; align-items: flex-end;">
-          <b style="font-size: 14pt;">7.0</b>
+          <b style="font-size: 14pt;">{{subject.overallAverage}}</b>
         </div>
       </div>
       <div>

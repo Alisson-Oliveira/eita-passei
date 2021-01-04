@@ -1,21 +1,29 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the DetailsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { ConfigProvider } from '../../../providers/config';
 
 @IonicPage()
 @Component({
   selector: 'page-details',
   templateUrl: 'details.html',
+  providers: [
+    ConfigProvider
+  ]
 })
 export class DetailsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) { }
+  public subject = [];
+
+  constructor (
+    public navCtrl: NavController, 
+    public navParams: NavParams, 
+    public configCtrl: ConfigProvider,
+  ) { 
+    this.subject = navParams.get('item');;
+
+    console.log(this.subject);
+  }
 
   public alert() {
     alert("Em breve...");
