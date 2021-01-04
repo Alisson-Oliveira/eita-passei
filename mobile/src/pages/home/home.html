@@ -23,19 +23,32 @@
           <ion-card-content class="content-button">
             <button 
               ion-button 
-              large 
+              icon-start 
               class="content-button-details"  
               (click)="handleToDetails(item)"
             >
-              Mostrar
+              <ion-icon 
+                name="md-stats"
+                style="font-size: 12pt;"
+              ></ion-icon>
+              Mostrar 
             </button>
           </ion-card-content>
       </ion-card>
     </div>
   </ion-scroll>
 
-  <button ion-button large class="button-plus" (click)="handleToPlus()">
+  <ion-fab style="right: 10px; bottom: 15px;">
+    <button (click)="handleToPlus()" ion-fab style="background-color: #008080">
+      <ion-icon 
+        name="md-add"
+        style="font-size: 18pt; font-weight: bold;"
+      ></ion-icon>
+    </button>
+  </ion-fab>
+<!-- 
+  <button ion-button class="button-plus" (click)="handleToPlus()">
     Adicionar matéria
-  </button>
+  </button> -->
 </ion-content>  
  

@@ -20,13 +20,17 @@ export class MyApp {
     splashScreen: SplashScreen,
     configCtrl: ConfigProvider
   ) {
-    platform.ready().then(() => {
+    platform.ready().then(() => { 
 
       const response = configCtrl.getConfig(); 
 
-      if (response.install) {
-        this.rootPage = 'TabsPage';
-      } else {
+      if (response !== null) {
+        if (response.install) {
+          this.rootPage = 'TabsPage';
+        } else {
+          this.rootPage = 'UserPage';
+        }
+      } else { 
         this.rootPage = 'UserPage';
       }
 

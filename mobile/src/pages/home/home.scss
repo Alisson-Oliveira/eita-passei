@@ -57,12 +57,13 @@ page-home {
         justify-content: center;
 
         .content-button-details {
-          display: flex; 
-          width: 250px; 
-          height: 56px; 
-          background-color: teal; 
+          width: 120px; 
+          height: 36px; 
+          font-size: 11pt;
           text-transform: none; 
-          border-radius: 12px;
+          border-radius: 10px;
+          display: flex; 
+          background-color: teal; 
         }
       }
     }
@@ -70,8 +71,9 @@ page-home {
     .button-plus {
       display: flex; 
       align-self: center; 
-      width: 270px; 
+      width: 220px; 
       height: 76px; 
+      font-size: 12pt;
       background-color: teal; 
       text-transform: none; 
       border-radius: 12px; 
