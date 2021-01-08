@@ -65,19 +65,25 @@ page-home {
           display: flex; 
           background-color: teal; 
         }
+
+        .icon-size {
+          font-size: 12pt;
+        }
       }
     }
 
     .button-plus {
-      display: flex; 
-      align-self: center; 
-      width: 220px; 
-      height: 76px; 
-      font-size: 12pt;
-      background-color: teal; 
-      text-transform: none; 
-      border-radius: 12px; 
-      margin: 20px;
+      right: 10px;
+      bottom: 15px;
+
+      .background-teal {
+        background-color: #008080;
+
+        .icon-plus-size {
+          font-size: 18pt; 
+          font-weight: bold;
+        }
+      }
     }
   }
 }

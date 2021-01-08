@@ -4,67 +4,74 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <ion-card style="border-radius: 12px;">
-    <ion-card-header style="display: flex; justify-content: space-between;">
-      <div style="display: flex; flex-direction: column;">
-        <b style="font-size: 16pt;">{{subject.matter}}</b>
-        <i style="font-size: 11pt;">{{subject.teacher}}</i>
+  <ion-card class="details-container">
+    <ion-card-header class="header">
+      <div class="header-data">
+        <b class="subject">{{subject.matter}}</b>
+        <i class="teacher">{{subject.teacher}}</i>
       </div>
       <ion-icon 
         name="md-create"
-        style="font-size: 16pt; color: teal"
+        class="button-edit-icon-size"
         (click)="alert()"
       ></ion-icon>
     </ion-card-header>
     <ion-card-content>
       <div>
-        <b style="font-size: 14pt;">Notas</b>
+        <b class="content-notas-size">Notas</b>
         <hr>
         <div *ngFor="let item of subject.grades">
-          <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-            <p style="font-size: 12pt;">Nota {{item.id}}:</p>
-            <b style="font-size: 14pt;">{{item.grade}}</b> 
+          <div class="grades">
+            <p class="grade-id-size">Nota {{item.id}}:</p>
+            <b class="grade">{{item.grade}}</b> 
           </div>
-          <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-            <p style="font-size: 12pt;">Peso</p>
-            <p style="font-size: 10pt;">(x{{item.weight}})</p>
+          <div class="weights">
+            <p class="weight-title-size">Peso</p>
+            <p class="weight">(x{{item.weight}})</p>
           </div>
-          <b style="display: flex; justify-content: flex-end; font-size: 14pt;">{{getGrades(item.grade, item.weight).toFixed(1)}}</b>
+          <b class="format-grade">{{getGrades(item.grade, item.weight).toFixed(1)}}</b>
         </div>
       </div>
       <div>
-        <b style="font-size: 14pt;">Nota Final</b> 
+        <b class="content-nota-final">Nota Final</b> 
         <hr>
-        <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-          <p style="font-size: 12pt;">Nota Total:</p>
-          <b style="font-size: 14pt;">{{getFinalGrade()}}</b>
+        <div class="container-nota-final">
+          <p class="container-final-size-12">Nota Total:</p>
+          <b class="container-final-size-14">{{getFinalGrade()}}</b>
         </div>
-        <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-          <p style="font-size: 12pt;">Peso Total:</p>
-          <p style="font-size: 12pt;">(x{{getFinalWeight()}})</p>
+        <div class="container-nota-final">
+          <p class="container-final-size-12">Peso Total:</p>
+          <p class="container-final-size-12">(x{{getFinalWeight()}})</p>
         </div>
-        <b style="display: flex; justify-content: flex-end; font-size: 18pt;">{{getFinal().toFixed(2)}}</b>
+        <b class="container-final">{{getFinal().toFixed(2)}}</b>
       </div>
       <div>
-        <b style="font-size: 14pt;">Média Geral</b>
+        <b class="content-overall-average">Média Geral</b>
         <hr>
-        <div style="display: flex; justify-content: center; align-items: flex-end;">
-          <b style="font-size: 14pt;">{{subject.overallAverage}}</b>
+        <div class="container-overall-situation">
+          <b class="container-overall-situation-size">{{subject.overallAverage}}</b>
         </div>
       </div>
       <div>
-        <b style="font-size: 14pt;">Situação</b>
+        <b class="content-situation">Situação</b>
         <hr>
-        <div style="display: flex; justify-content: center; align-items: flex-end;">
-          <b style="font-size: 14pt; ">{{getState()}}</b>
+        <div class="container-overall-situation">
+          <b class="container-overall-situation-size">{{getState()}}</b>
         </div>
       </div>
     </ion-card-content>
-    <div style="margin-bottom: 12px; width: 100%; display: flex; justify-content: center;">
-      <button (click)="handleRemoveSubject()" ion-button outline icon-start color="danger" style="width: 120px; height: 36px; text-transform: none; border-radius: 12px;">
+    <div class="button-remove">
+      <button 
+        (click)="handleRemoveSubject()" 
+        ion-button 
+        outline 
+        icon-start 
+        color="danger" 
+        class="button-shape"
+      >
         <ion-icon 
           name="md-trash"
-          style="font-size: 12pt;"
+          class="remove-icon-size"
         ></ion-icon>
         Remover
       </button> 

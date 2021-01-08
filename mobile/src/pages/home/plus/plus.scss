@@ -51,6 +51,41 @@ page-plus {
           }
         }
       }
+
+      .button-plus {
+        margin-top: 12px; 
+        width: 100%; 
+        display: flex; 
+        justify-content: center;
+
+        .shape {
+          width: 120px; 
+          height: 36px; 
+          background-color: teal; 
+          text-transform: none; 
+          border-radius: 12px;
+        }
+      }
+    }
+
+    .save {
+      margin-top: 12px; 
+      width: 100%; 
+      display: flex; 
+      justify-content: center;
+
+      .save-shape {
+        width: 120px; 
+        height: 36px; 
+        background-color: teal; 
+        text-transform: none; 
+        border-radius: 12px;
+
+        .icon-size {
+          font-size: 12pt; 
+          font-weight: bold;
+        }
+      }
     }
   }
 }

@@ -180,17 +180,27 @@
         </div>
       </div>
     </div>
-    <div *ngIf="isGrade === true" style="margin-top: 12px; width: 100%; display: flex; justify-content: center;">
-      <button (click)="isGrade3 === true ? systemGrade(4, true) : systemGrade(3, true)" ion-button small style="width: 120px; height: 36px; background-color: teal; text-transform: none; border-radius: 12px;">
+    <div *ngIf="isGrade === true" class="button-plus">
+      <button 
+        (click)="isGrade3 === true ? systemGrade(4, true) : systemGrade(3, true)" 
+        ion-button 
+        small 
+        class="shape"
+      >
         Adicionar nota
       </button>
     </div>
   </div>
-  <div style="margin-top: 12px; width: 100%; display: flex; justify-content: center;">
-    <button (click)="systemSaveSubject()" ion-button icon-start style="width: 120px; height: 36px; background-color: teal; text-transform: none; border-radius: 12px;">
+  <div class="save">
+    <button 
+      (click)="systemSaveSubject()"
+      ion-button 
+      icon-start 
+      class="save-shape"
+    >
       <ion-icon 
         name="md-send"
-        style="font-size: 12pt; font-weight: bold;"
+        class="icon-size"
       ></ion-icon>
       Salvar
     </button> 

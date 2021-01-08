@@ -1,3 +1,126 @@
 page-details {
+  .details-container {
+    border-radius: 12px;
 
+    .header {
+      display: flex; 
+      justify-content: space-between;
+
+      .header-data {
+        display: flex; 
+        flex-direction: column;
+
+        .subject {
+          font-size: 16pt;
+        }
+
+        .teacher {
+          font-size: 11pt;
+        }
+      }
+
+      .button-edit-icon-size {
+        font-size: 16pt; 
+        color: teal;
+      }
+    }
+
+    .content-notas-size {
+      font-size: 14pt;
+    }
+
+    .grades {
+      display: flex; 
+      justify-content: space-between; 
+      align-items: flex-end;
+
+      .grade-id-size {
+        font-size: 12pt;
+      }
+
+      .grade {
+        font-size: 14pt;
+      }
+    }
+
+    .weights {
+      display: flex; 
+      justify-content: space-between; 
+      align-items: flex-start;
+
+      .weight-title-size {
+        font-size: 12pt;
+      }
+
+      .weight {
+        font-size: 10pt;
+      }
+    }
+
+    .format-grade {
+      display: flex; 
+      justify-content: flex-end; 
+      font-size: 14pt;
+    }
+
+    .content-nota-final {
+      font-size: 14pt;
+    }
+
+    .container-nota-final {
+      display: flex; 
+      justify-content: space-between; 
+      align-items: flex-end;
+
+      .container-final-size-12 {
+        font-size: 12pt;
+      }
+
+      .container-final-size-14 {
+        font-size: 14pt;
+      }
+    }
+
+    .container-final {
+      display: flex; 
+      justify-content: flex-end; 
+      font-size: 18pt;
+    }
+
+    .content-overall-average {
+      font-size: 14pt;
+    }
+
+    .container-overall-situation {
+      display: flex; 
+      justify-content: center; 
+      align-items: flex-end;
+
+      .container-overall-situation-size {
+        font-size: 14pt;
+      }
+    }
+
+    .content-situation {
+      font-size: 14pt;
+    }
+
+    .button-remove {
+      margin-bottom: 12px; 
+      width: 100%; 
+      display: flex; 
+      justify-content: center;
+
+      .button-shape {
+        width: 120px;
+        height: 36px; 
+        text-transform: none; 
+        border-radius: 12px;
+
+        .remove-icon-size {
+          font-size: 12pt;
+        }
+      }
+    }
+  }
 }

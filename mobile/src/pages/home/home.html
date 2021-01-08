@@ -4,7 +4,6 @@
     <div class="subtitle"> Aqui está suas <b>matérias</b>. </div>  
   </div>
   <ion-scroll scrollY="true" class="content">  
-
     <ion-card *ngIf="subjects.length === 0" class="content-empty">
       <ion-card-header>
         <b>Sem matérias</b>
@@ -13,7 +12,6 @@
         Adicione matérias e acompanhe em tempo real suas notas.
       </ion-card-content>
     </ion-card>
-
     <div *ngIf="subjects.length !== 0" >
       <ion-card *ngFor="let item of subjects" class="content-container">
           <ion-card-header class="content-header">
@@ -29,7 +27,7 @@
             >
               <ion-icon 
                 name="md-stats"
-                style="font-size: 12pt;"
+                class="icon-size"
               ></ion-icon>
               Mostrar 
             </button>
@@ -37,18 +35,13 @@
       </ion-card>
     </div>
   </ion-scroll>
-
-  <ion-fab style="right: 10px; bottom: 15px;">
-    <button (click)="handleToPlus()" ion-fab style="background-color: #008080">
+  <ion-fab class="button-plus">
+    <button (click)="handleToPlus()" ion-fab class="background-teal">
       <ion-icon 
         name="md-add"
-        style="font-size: 18pt; font-weight: bold;"
+        class="icon-plus-size"
       ></ion-icon>
     </button>
   </ion-fab>
-<!-- 
-  <button ion-button class="button-plus" (click)="handleToPlus()">
-    Adicionar matéria
-  </button> -->
 </ion-content>  
  

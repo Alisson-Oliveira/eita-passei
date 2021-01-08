@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.alsrokn.eita.passei" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.alsrokn.eita.passei" version="2.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Eita Passei</name>
-    <description>Aprendendo Ionic 3.</description>
+    <description>Aprendendo Ionic 3</description>
     <author email="olisskn.000@gmail.com" href="">Alisson Oliveira</author>
     <content src="index.html" />
     <access origin="*" />
