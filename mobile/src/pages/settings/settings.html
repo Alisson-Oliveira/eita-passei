@@ -1,30 +1,23 @@
 <ion-content>
-  <div style="height: 50%; width: 100%; background: teal"></div>
+  <div class="backgroud-teal"></div>
   <ion-card>
-    <div style="font-size: 18pt; text-align: center;"> Alisson Oliveira </div> 
+    <div class="username">{{username}}</div> 
     <hr> 
     <ion-list no-lines>
-      <ion-item (click)="alert()">
-        <ion-icon name="create" item-start></ion-icon>
+      <ion-item (click)="handleToEdit()">
+        <ion-icon name="create" item-start class="icon-size"></ion-icon>
         Editar
       </ion-item> 
-      <ion-item (click)="alert()"> 
-        <ion-icon name="md-document" item-start></ion-icon>
-        Legal
-      </ion-item>
       <ion-item>
-        <ion-icon name="md-cube" item-start></ion-icon>
-        <div style="display: flex; justify-content: space-between;">
+        <ion-icon name="md-cube" item-start class="icon-size"></ion-icon>
+        <div class="version">
           Versão
-          <b>1.0.0</b>
+          <b>2.0.0</b>
         </div>
       </ion-item>
     </ion-list>  
   </ion-card>
-  <ion-card style="top: 12%; border-radius: 50%; height: 100px; width: 100px; padding: 0px;">
-    <ion-img style="width: 100px; height: 100px; border-radius: 50%;" src="../../../assets/avatar/man.png"></ion-img>
+  <ion-card class="card-image">
+    <ion-img class="avatar" [src]="avatar"></ion-img>
   </ion-card>
 </ion-content>
-
-
-<!-- <div>Ícones feitos por <a href="https://www.flaticon.com/br/autores/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div> -->

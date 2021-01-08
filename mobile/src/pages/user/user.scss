@@ -15,16 +15,6 @@ page-user {
       background-color: teal;
       justify-content: space-between;
 
-      .arrow-button {
-        display: flex;
-        align-self: start; 
-        width: 36px;
-
-        .arrow-button-size {
-          font-size: 30px;
-        }
-      }
-
       .images-container {
         display: flex;
         height: 100px;
@@ -69,6 +59,21 @@ page-user {
       .singin-button-content {
         width: 270px; 
         background-color: teal; 
+        text-transform: none; 
+        border-radius: 12px;
+      }
+
+      .save-button-content {
+        width: 120px; 
+        background-color: teal; 
+        text-transform: none; 
+        border-radius: 12px;
+        font-size: 14px;
+      }
+
+      .cancel-button-content {
+        width: 120px; 
+        font-size: 14px;
         text-transform: none; 
         border-radius: 12px;
       }

@@ -11,7 +11,11 @@
             src="../../../assets/avatar/man.png"
             class="images-container-size"
           ></ion-img>          
-          <ion-icon *ngIf="selected === 1" md="md-checkmark-circle-outline" color="light"></ion-icon>
+          <ion-icon 
+            *ngIf="selected === 1" 
+            md="md-checkmark-circle-outline" 
+            color="light"
+          ></ion-icon>
         </div>
         <div class="images-container-image"> 
           <ion-img 
@@ -19,7 +23,11 @@
             src="../../../assets/avatar/woman.png"
             class="images-container-size"
           ></ion-img>          
-          <ion-icon *ngIf="selected === 2" md="md-checkmark-circle-outline" color="light"></ion-icon>
+          <ion-icon 
+            *ngIf="selected === 2" 
+            md="md-checkmark-circle-outline" 
+            color="light"
+          ></ion-icon>
         </div>
         <div class="images-container-image">
           <ion-img 
@@ -27,7 +35,11 @@
             src="../../../assets/avatar/avatar_1.png"
             class="images-container-size"
           ></ion-img>          
-          <ion-icon *ngIf="selected === 3" md="md-checkmark-circle-outline" color="light"></ion-icon>
+          <ion-icon 
+            *ngIf="selected === 3" 
+            md="md-checkmark-circle-outline" 
+            color="light"
+          ></ion-icon>
         </div>
       </div>
       <div class="input-content">
@@ -42,6 +54,7 @@
     </div>
     <div class="singin-button">
       <button 
+        *ngIf="edit === false"
         ion-button 
         large
         icon-start
@@ -51,6 +64,28 @@
         <ion-icon md="md-log-in" color="light"></ion-icon>
         Entrar
       </button>
+      <div *ngIf="edit === true">
+        <button 
+          ion-button 
+          icon-start
+          class="save-button-content"
+          (click)="systemOpenHomePage()"
+        >
+          <ion-icon md="md-send" color="light"></ion-icon>
+          Salvar
+        </button>
+        <button 
+          ion-button 
+          icon-start
+          outline
+          color="danger"
+          class="cancel-button-content"
+          (click)="systemCancelEdit()" 
+        >
+          <ion-icon md="md-close" color="danger"></ion-icon>
+          Cancelar
+        </button>
+      </div>
     </div>
   </div>
 </ion-content> 
