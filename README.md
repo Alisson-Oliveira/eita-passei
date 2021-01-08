@@ -1,4 +1,4 @@
-# Eita_Passei
+# Eita Passei
 
 App para auxiliar estudantes a ter um controle sobre suas notas.
 
@@ -14,6 +14,7 @@ App para auxiliar estudantes a ter um controle sobre suas notas.
 - Javascript
 - Typescript
 - Angular
+- HTML
 - Scss
 
 # Versão
