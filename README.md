@@ -2,14 +2,14 @@
 
 App para auxiliar estudantes a ter um controle sobre suas notas.
 
-# OBS
+### OBS
 - Qualquer ajuda é bem vinda!
 - Logo disponibilizarei o apk do app.
 
 ### Plataformas
 - Android
 
-# Ferramentas
+### Ferramentas
 - Ionic 3 (versão específica 4.3.1)
 - Javascript
 - Typescript
@@ -17,7 +17,7 @@ App para auxiliar estudantes a ter um controle sobre suas notas.
 - HTML
 - Scss
 
-# Versão
+### Versão
 - 2.0.0
 
 ### Licença
